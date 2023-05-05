@@ -307,24 +307,31 @@ const street = "Goma City, C. Karisimbi, Q. Murara, Av. Uvira N30";
 })(jQuery);
 
 (() => {
+
   $(document).ready(() => {
+
     $("#auther").html(auther)
     $("#touchus").html(contactemail)
     $("#addresse").html(addresse)
     $("#street").html(street)
+
     $("[tag=hire]").attr({
       href: `mailto:${contacthire}`
     })
+
     $("#github").attr(
       {
         "href": github,
         "target": "_blank"
       }
     )
-  })
+
+  });
+
+  $(".contacts").html(contactemail)
 
   $("#contactform").on("submit", e => {
     e.preventDefault();
-    alert(1)
   })
+
 })();
